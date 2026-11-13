@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실시간 방명록</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 실시간 방명록</h1>
+    <p class="subtitle">자유롭게 발자취를 남겨주세요!</p>
+
+    <!-- 방명록 입력 폼 -->
+    <form id="guestbook-form">
+      <input type="text" id="nickname" placeholder="닉네임 (최대 15자)" maxlength="15" required />
+      <textarea id="message" placeholder="남길 메시지를 입력하세요 (최대 200자)" maxlength="200" rows="3" required></textarea>
+      <button type="submit" id="submit-btn">방명록 남기기</button>
+    </form>
+
+    <hr />
+
+    <!-- 방명록 목록 출력 영역 -->
+    <div id="guestbook-list" class="list-container">
+      <p class="loading">방명록을 불러오는 중...</p>
+    </div>
+  </div>
+
+  <!-- 모듈 방식으로 app.js 연결 -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
